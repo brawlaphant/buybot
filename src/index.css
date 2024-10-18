@@ -1,0 +1,103 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+  @apply bg-gray-900 text-gray-100;
+}
+
+.btn {
+  @apply px-4 py-2 rounded font-semibold focus:outline-none focus:ring-2 focus:ring-opacity-50 transition-all duration-300;
+}
+
+.btn-primary {
+  @apply bg-green-600 text-white hover:bg-green-700 focus:ring-green-500 transform hover:scale-105;
+}
+
+.btn-secondary {
+  @apply bg-gray-700 text-white hover:bg-gray-600 focus:ring-gray-500 transform hover:scale-105;
+}
+
+.input {
+  @apply mt-1 block w-full rounded-md bg-gray-800 border-gray-700 text-gray-100 shadow-sm focus:border-green-500 focus:ring focus:ring-green-500 focus:ring-opacity-50 transition-all duration-300;
+}
+
+/* Add a subtle pulse animation for the running status */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.status-running {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Enhanced styles for input fields */
+.input {
+  @apply border-2 border-gray-600 hover:border-gray-500;
+}
+
+.input:hover {
+  @apply bg-gray-700;
+}
+
+.input:focus {
+  @apply ring-2 ring-green-500 ring-opacity-50 transform scale-105 border-green-500;
+}
+
+/* Styles for select inputs */
+select.input {
+  @apply cursor-pointer pr-10;
+}
+
+/* Styles for number inputs */
+input[type="number"].input {
+  @apply text-right pr-2;
+}
+
+/* Fun animations for input interactions */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.input:focus {
+  animation: bounce 0.5s ease;
+}
+
+/* Tooltip styles */
+.tooltip {
+  @apply invisible absolute;
+}
+
+.has-tooltip:hover .tooltip {
+  @apply visible z-50;
+}
+
+/* New styles for enhanced input distinguishability */
+.input {
+  @apply shadow-inner shadow-gray-900;
+}
+
+.input:hover {
+  @apply shadow-md shadow-gray-900;
+}
+
+.input:focus {
+  @apply shadow-lg shadow-green-900;
+}
+
+/* Placeholder text color */
+.input::placeholder {
+  @apply text-gray-500;
+}
+
+/* Custom styles for select dropdowns */
+select.input {
+  @apply bg-gray-800 appearance-none;
+}
+
+/* Add a subtle glow effect on focus */
+.input:focus {
+  @apply shadow-[0_0_10px_rgba(74,222,128,0.5)];
+}

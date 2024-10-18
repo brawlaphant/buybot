@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Welcome to EcoChain!</h1>
+  <h2>Here are some eco-friendly actions:</h2>
+  <ul>
+    <li *ngFor="let action of ecoActions">{{ action }}</li>
+  </ul>
+  <div class="form-group">
+    <input [(ngModel)]="newAction" placeholder="Enter a new eco-friendly action" class="form-control">
+    <button (click)="addAction()" class="btn btn-primary">Add Action</button>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<ActionBar title="New Submission"></ActionBar>
+
+<ScrollView>
+  <StackLayout class="p-4">
+    <TextField [(ngModel)]="title" hint="Title" class="input mb-4"></TextField>
+    <TextView [(ngModel)]="description" hint="Description" class="input mb-4"></TextView>
+    <Button text="Take Photo" (tap)="onTakePhoto()" class="btn btn-primary mb-4"></Button>
+    <Button text="Record Video" (tap)="onRecordVideo()" class="btn btn-secondary mb-4"></Button>
+    <Image *ngIf="imageSrc" [src]="imageSrc" class="w-full h-64 mb-4"></Image>
+    <Button text="Submit" (tap)="onSubmit()" class="btn btn-success" [isEnabled]="canSubmit()"></Button>
+  </StackLayout>
+</ScrollView>

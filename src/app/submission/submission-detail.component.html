@@ -1,0 +1,10 @@
+<ActionBar [title]="submission?.title || 'Submission Details'"></ActionBar>
+
+<ScrollView>
+  <StackLayout class="p-4">
+    <Image [src]="submission?.imageData" class="w-full h-64 mb-4"></Image>
+    <Label [text]="submission?.description" class="text-base mb-4"></Label>
+    <Label [text]="'Votes: ' + submission?.votes" class="text-lg font-bold mb-4"></Label>
+    <Button text="Vote" (tap)="onVote()" class="btn btn-primary"></Button>
+  </StackLayout>
+</ScrollView>
